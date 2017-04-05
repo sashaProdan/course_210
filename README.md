@@ -1,1 +1,1 @@
-#### Computational Thinking and JavaScript Programming
+### Computational Thinking and JavaScript Programming
