@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Student Grade</title>
+  </head>
+  <body>
+  <script>  
+    var scores = prompt('How many scores do you have?');
+    
+    var sequence = 1;
+    var totalScore = 0;
+
+    function avgScore(total, times) {
+      return total / Number(times);
+    }
+
+    while (sequence < (Number(scores) + 1)) {
+      var currentScore = prompt('Enter score ' + sequence + ':');
+      sequence++;
+      totalScore += Number(currentScore);
+    }
+
+    var grade = 'F';
+
+    if (avgScore(totalScore, scores) >= 90) {
+      grade = 'A';
+    } else if (avgScore(totalScore, scores) >= 70) {
+      grade = 'B';
+    } else if (avgScore(totalScore, scores) >= 50) {
+      grade = 'C';
+    }
+
+    document.write('Based on the average of your ' + scores + ' scores your letter grade is ' + grade + '.');   
+  </script>
+  </body>
+</html>

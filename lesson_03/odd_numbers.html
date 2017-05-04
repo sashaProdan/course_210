@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Odd Numbers</title>
+  </head>
+  <body>
+    <script>
+      function logOddNumbers(num) {
+        for(var i = 1; i <= num; i++) {
+          if (i % 2 === 0) {
+            continue;
+          }
+          
+          console.log(i);
+        } 
+      }
+
+      logOddNumbers(19);
+    </script>
+  </body>
+</html>

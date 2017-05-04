@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Prime Check</title>
+  </head>
+  <body>
+  <script>
+    function isPrime(number) {
+      for(var i = 2; i < number; i++) {
+        if (number % i === 0) {
+          return false;
+        }
+      }
+
+      return true;
+    }
+
+    isPrime(1);
+    isPrime(2);
+    isPrime(3);
+    isPrime(43);
+    isPrime(55);
+    isPrime(0);
+  </script>
+  </body>
+</html>

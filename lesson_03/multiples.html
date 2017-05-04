@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Multiples of 3 and 5</title>
+  </head>
+  <body>
+    <script>
+      function multiplesOfThreeAndFive(min, max) {
+        for(var i = min; i <= max; i++) {
+          if (i % 3 === 0 && i % 5 === 0) {
+            console.log(i + '!');
+          } else if (i % 5 === 0) {
+            console.log(i);
+          } else if (i % 3 === 0) {
+            console.log(i);
+          }
+        }
+      }
+
+      multiplesOfThreeAndFive(15, 100);
+    </script>
+  </body>
+</html>
