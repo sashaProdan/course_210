@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Pattern Generation</title>
+  </head>
+  <body>
+  <script>
+    function generatePattern(rows) {
+      var lastRawString = '';
+      var width;
+      var row;
+      var initialString = '';
+
+      for (var i = 1; i <= rows; i++) {
+        lastRawString += String(i);
+      }
+
+      width = lastRawString.length;
+
+      for (var i = 1; i <= rows; i++) {
+        initialString += String(i);
+        
+        row = initialString;
+
+        while (row.length < width) {
+          row += '*';
+        }
+
+        console.log(row);
+      }
+    }
+
+    generatePattern(18);
+  </script>
+  </body>
+</html>

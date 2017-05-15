@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Substring(2)</title>
+  </head>
+  <body>
+  <script>
+    function substring(string, start, end) {
+      newString = '';
+
+      for (var i = start; i < end; i++) {
+        newString += string[i];
+      }
+
+      console.log(newString);
+      
+    }
+
+    var string = 'hello world';
+
+    substring(string, 2, 4);    // "ll"
+    substring(string, 4, 2);    // "ll"
+    substring(string, 0, -1);   // ""
+    substring(string, 2);       // "llo world"
+    substring(string, 'a');     // "hello world"
+    substring(string, 8, 20);   // "rld"
+  </script>
+  </body>
+</html>

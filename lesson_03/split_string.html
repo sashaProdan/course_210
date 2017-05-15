@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Split String </title>
+  </head>
+  <body>
+  <script>
+    function splitString(str, delimiter) {
+      if (typeof delimiter === 'undefined') {
+        console.log('ERROR: No delimiter');
+        return;
+      }
+
+      newString = '';
+
+      for (var i = 0; i < str.length; i++) {
+        if (str[i] === delimiter) {
+          console.log(newString);
+          newString = '';
+        } else if (delimiter === '') {
+          console.log(str[i]);
+        } else {
+          newString += str[i];
+        }
+      }
+
+      if (newString) {
+          console.log(newString);
+      }
+
+    }
+
+    splitString('abc,123,hello world', ',');
+    splitString('hello');
+    splitString('hello', ';');
+    splitString(';hello;', ';');
+  </script>
+  </body>
+</html>

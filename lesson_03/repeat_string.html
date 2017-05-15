@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Repeat String</title>
+  </head>
+  <body>
+  <script>
+    function repeat(str, times) {
+      if (isNaN(times) || times < 0) {
+        console.log('undefined');
+        return;
+      } else if (times === 0) {
+        console.log('');
+        return;
+      }
+
+      newString = '';
+
+      for (var i = 0; i < times; i++) {
+        newString += str;
+      }
+      
+      console.log(newString);
+
+    } 
+
+    repeat('abc', 1);    // "abc"
+    repeat('abc', 2);    // "abcabc"
+    repeat('abc', -1);   // undefined
+    repeat('abc', 0);    // ""
+    repeat('abc', 'a');  // undefined
+  </script>
+  </body>
+</html>

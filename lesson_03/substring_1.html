@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Substring(1)</title>
+  </head>
+  <body>
+  <script>
+    function substr(string, start, length) {
+      var start_index = 0;
+      var subString = '';
+
+      if (start < 0) {
+        start_index = string.length + start;
+      } else if (start === 0) {
+        console.log('');
+        return;
+      } else {
+        start_index = start;
+      }
+
+      for (var i = start_index; i < string.length; i++) {
+          subString += string[i];
+          if (subString.length === length || i === string.length - 1) {
+            console.log(subString);
+            return;
+          }
+
+      }
+
+    }
+
+    var string = 'hello world';
+
+    substr(string, 2, 4);     // "llo "
+    substr(string, -3, 2);    // "rl"
+    substr(string, 8, 20);    // "rld"
+    substr(string, 0, -20);   // ""
+    substr(string, 0, 0);     // ""
+  </script>
+  </body>
+</html>
